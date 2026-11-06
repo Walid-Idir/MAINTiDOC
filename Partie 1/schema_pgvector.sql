@@ -34,3 +34,4 @@ CREATE TABLE IF NOT EXISTS image_clip_embeddings (
 
 CREATE INDEX IF NOT EXISTS idx_image_clip_embeddings_hnsw 
 ON image_clip_embeddings USING hnsw (clip_embedding vector_cosine_ops);
+

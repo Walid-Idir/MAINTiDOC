@@ -18,6 +18,9 @@ Projet d'extraction multimodale, indexation vectorielle et Question-Réponse (RA
 ```
 MAINTiDOC/
 │
+├── docker-compose.yml          # Déploiement multi-conteneurs (Postgres PGVector + Streamlit)
+├── Dockerfile                  # Conteneurisation de l'application Streamlit
+├── .dockerignore               # Optimisation du build Docker
 ├── requirements.txt            # Dépendances Python du projet
 ├── README.md                   # Présentation du dépôt
 │
@@ -63,3 +66,16 @@ Accès navigateur : **`http://localhost:8501`**
 ```powershell
 python agentic_rag.py --query "Quels sont les couples de serrage pour la culasse et le flasque ?"
 ```
+
+---
+
+## 🐳 Déploiement avec Docker Compose (Optionnel)
+
+Pour exécuter l'ensemble de la solution dans des conteneurs isolés et portables :
+
+```powershell
+# Lancement de la base PostgreSQL PGVector et de l'application Streamlit :
+docker compose up --build
+```
+L'interface est accessible immédiatement sur **`http://localhost:8501`** avec la base PGVector prête et initialisée.
+

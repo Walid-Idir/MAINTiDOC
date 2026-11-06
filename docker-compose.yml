@@ -1,0 +1,54 @@
+# =============================================================================
+# MAINTiDOC - Orchestration Docker Compose Multi-Conteneurs
+# =============================================================================
+services:
+  # ---------------------------------------------------------------------------
+  # 1. Base PostgreSQL avec Extension PGVector native
+  # ---------------------------------------------------------------------------
+  pgvector:
+    image: pgvector/pgvector:pg16
+    container_name: maintidoc-pgvector
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: docdb
+      POSTGRES_USER: docuser
+      POSTGRES_PASSWORD: docpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./Partie 1/schema_pgvector.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docuser -d docdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ---------------------------------------------------------------------------
+  # 2. Application Web Streamlit & RAG Agentique
+  # ---------------------------------------------------------------------------
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: maintidoc-streamlit
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    environment:
+      PG_HOST: pgvector
+      PG_PORT: 5432
+      PG_USER: docuser
+      PG_PASSWORD: docpass
+      PG_DB: docdb
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+      OLLAMA_MODEL: qwen2.5:1.5b
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      pgvector:
+        condition: service_healthy
+
+volumes:
+  pgdata:
+    driver: local

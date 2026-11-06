@@ -1,0 +1,18 @@
+# Environnements virtuels
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyd
+
+# Git
+.git/
+.gitignore
+
+# OS & Logs
+.DS_Store
+Thumbs.db
+*.log

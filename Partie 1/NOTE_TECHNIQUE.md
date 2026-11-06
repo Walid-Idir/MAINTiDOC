@@ -90,6 +90,11 @@ Le système permet aux ingénieurs et techniciens de maintenance de :
 4. **Interface Graphique Utilisateur (`app.py`)** :
    - `Streamlit` (version 1.44) : interface web interactive avec upload de documents, basculement dynamique de mode (Agent vs RAG direct), explorateur de figures et monitoring de la base de données.
 
+5. **Conteneurisation & Portabilité (`docker-compose.yml` & `Dockerfile`)** :
+   - Image PostgreSQL avec PGVector officiel (`pgvector/pgvector:pg16`) initialisée automatiquement avec `schema_pgvector.sql`.
+   - Conteneur applicatif Python 3.12 multi-étapes exposant l'interface Streamlit sur le port `8501`.
+   - Déploiement reproductible en une seule commande : `docker compose up --build`.
+
 ---
 
 ### 5. Limites du Système et Pistes d'Amélioration
