@@ -1,0 +1,15 @@
+llama-index>=0.10.0
+llama-index-vector-stores-postgres
+llama-index-embeddings-huggingface
+llama-index-llms-ollama
+langchain>=1.4.0
+langchain-core
+langchain-community
+langchain-ollama
+psycopg2-binary>=2.9.0
+pymupdf>=1.24.0
+torch>=2.0.0
+transformers>=4.40.0
+pillow>=10.0.0
+streamlit>=1.30.0
+reportlab>=4.0.0

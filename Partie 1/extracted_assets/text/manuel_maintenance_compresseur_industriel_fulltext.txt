@@ -1,0 +1,75 @@
+--- Page 1 ---
+MANUEL TECHNIQUE DE MAINTENANCE DES
+MACHINES
+Compresseur Industriel à Vis Lubrifiée — Série CPX-450 (Pression 10 Bar - 55 kW)
+1. Consignes Générales de Sécurité et Fonctionnement
+Le compresseur à vis série CPX-450 est un équipement électromécanique lourd dédié à la fourniture continue d'air
+comprimé haute pression pour les ateliers d'usinage et de fabrication. Avant toute intervention technique ou opération
+de maintenance sur l'étage de compression ou le moteur triphasé, il est impératif de consigner les énergies
+(cadenassage électrique LOTO, dépressurisation complète du circuit pneumatique et vérification de la température du
+carter d'huile). Le non-respect des procédures de consignation peut entraîner des accidents mécaniques graves ou
+des brûlures thermiques.
+2. Schéma Mécanique des Composants Principaux
+MOTEUR 55 kW
+Accouplement
+BLOC COMPRESSEUR
+Rotor Mâle/Femelle
+RÉSERVOIR DÉshuileur
+Filtre Coalescent
+Air Sortie 10 bar
+Figure 1: Schéma cinématique et flux des fluides du compresseur industriel CPX-450
+3. Calendrier des Interventions de Maintenance Préventive
+Composant Machine
+Action de Maintenance
+Périodicité
+Spécification / Pièce
+Filtre à air d'aspiration
+Nettoyage / Remplacement
+500 h / 2 000 h
+Cartouche plissée Réf. FA-450
+Huile de synthèse compresseur
+Vidange et analyse viscosité
+4 000 heures
+Huile ISO VG 46 Synthétique (25 L)
+Filtre séparateur d'huile
+Remplacement cartouche
+4 000 heures
+Séparateur coalescent Réf. SP-88
+Courroies de transmission
+Contrôle tension et flèche
+1 000 heures
+Tension au tensiomètre: 450 N
+Roulements de palier moteur
+Graissage haute température
+2 500 heures
+Graisse Polyurée SKF LGHP 2 (15 g)
+Soupape de sécurité tarée
+Test d'ouverture manuelle
+Mensuel
+Pression d'échappement : 11.5 bar
+Table 1: Programme d'interventions préventives systématiques et consommables recommandés
+4. Couples de Serrage et Métrologie Mécanique
+Sous-ensemble Mécanique
+Type de Boulonnerie
+Couple Recommandé (N·m)
+Graissage Filetage
+
+
+--- Page 2 ---
+Flasque d'aspiration vis
+M12 Classe 8.8
+85 N·m
+Huile moteur légère
+Culasse étage haute pression
+M16 Classe 10.9
+210 N·m
+Pâte anti-grippante MoS2
+Fixation socle châssis / plot antivibratile
+M20 Classe 8.8
+380 N·m
+Montage à sec
+Capteur de pression piézoélectrique
+G 1/4 Gaz
+25 N·m
+Ruban PTFE téflon
+Table 2: Spécifications de serrage dynamométrique et tolérances de montage
